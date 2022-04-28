@@ -20,9 +20,13 @@ const CompCreateUser = () => {
         navigate('/')
     }
 
+    //Regresar a la vista principal
+    const returnView = async () => {
+        navigate('./')
+    }
+
     return(
         <div>
-            
             <div className="container">
                 <div className="row">
                     <div className="col-6">
@@ -60,6 +64,7 @@ const CompCreateUser = () => {
                         </div>
                         <div className="text-center">
                             <button type="submit" class="btn btn-primary"><i className="fa-solid fa-user-plus"></i> Submit</button>
+                            <button onClick={ () =>returnView ()} className="btn btn-danger "><i class="fa-solid fa-right-left"></i> Regresar</button>
                         </div>
                                                
                     </form>

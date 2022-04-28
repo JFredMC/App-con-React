@@ -1,5 +1,6 @@
 import './App.css';
 import Navbar from './components/NavBar';
+
 import { Fragment } from 'react';
 
 //Importación de componentes

@@ -29,6 +29,11 @@ const CompEditUser = () => {
         getUserById()
     },[])
 
+    //Regresar a la vista principal
+    const returnView = async () => {
+        navigate('./')
+    }
+
     const getUserById = async () => {
         const response = await axios.get(URI+id)
         setName(response.data[0].Name)
@@ -78,7 +83,8 @@ const CompEditUser = () => {
                             />
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="btn btn-primary"><i className="fa-solid fa-user-plus"></i> Update</button>
+                            <button type="submit" className="btn btn-primary ml-1"><i className="fa-solid fa-user-plus"></i> Update</button>
+                            <button onClick={ () =>returnView ()} className="btn btn-danger "><i class="fa-solid fa-right-left"></i> Regresar</button>
                         </div>
                                                
                     </form>
